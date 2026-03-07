@@ -1,0 +1,67 @@
+
+> cosmic-alchemist@1.0.0 test:coverage
+> jest --coverage
+
+FAIL __tests__/unit/store/useGameStore.test.ts
+  useGameStore
+    Initial State
+      √ should have score = 0 (15 ms)
+      √ should have highScore = 0 (5 ms)
+      √ should have currentElement = null (2 ms)
+      √ should have empty discoveredPlanets (2 ms)
+      √ should have empty activeElements (2 ms)
+    Element Management
+      √ should set current element (2 ms)
+      √ should clear current element with null (1 ms)
+      √ should add an element to activeElements (1 ms)
+      √ should remove an element by id
+      √ should update element density
+      √ should update element type
+      √ should update element position (1 ms)
+      √ should update element velocity (1 ms)
+    Scoring
+      √ should add score
+      √ should accumulate score (1 ms)
+      √ should update highScore when score exceeds it
+      √ should NOT decrease highScore on reset (1 ms)
+    Planet Discovery
+      √ should discover a new planet
+      √ should NOT add duplicate planet (1 ms)
+      √ should check if planet is discovered
+      √ should preserve discoveredPlanets on reset (1 ms)
+    Reset
+      × should reset score but keep highScore and discoveredPlanets (1 ms)
+
+  ● useGameStore › Reset › should reset score but keep highScore and discoveredPlanets
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 300
+    Received: 500
+
+    [0m [90m 281 |[39m
+     [90m 282 |[39m             expect(result[33m.[39mcurrent[33m.[39mscore)[33m.[39mtoBe([35m0[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m 283 |[39m             expect(result[33m.[39mcurrent[33m.[39mhighScore)[33m.[39mtoBe([35m300[39m)[33m;[39m
+     [90m     |[39m                                              [31m[1m^[22m[39m
+     [90m 284 |[39m             expect(result[33m.[39mcurrent[33m.[39mdiscoveredPlanets)[33m.[39mtoHaveLength([35m1[39m)[33m;[39m
+     [90m 285 |[39m             expect(result[33m.[39mcurrent[33m.[39mcurrentElement)[33m.[39mtoBeNull()[33m;[39m
+     [90m 286 |[39m             expect(result[33m.[39mcurrent[33m.[39mactiveElements)[33m.[39mtoHaveLength([35m0[39m)[33m;[39m[0m
+
+      at Object.toBe (__tests__/unit/store/useGameStore.test.ts:283:46)
+
+--------------------------|---------|----------|---------|---------|-------------------
+File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------------|---------|----------|---------|---------|-------------------
+All files                 |      75 |     37.5 |    90.9 |   69.23 |                   
+ hooks                    |       0 |        0 |       0 |       0 |                   
+  use-color-scheme.ts     |       0 |        0 |       0 |       0 |                   
+  use-color-scheme.web.ts |       0 |        0 |       0 |       0 | 8-20              
+  use-theme-color.ts      |       0 |        0 |       0 |       0 | 13-19             
+ store                    |     100 |       60 |     100 |     100 |                   
+  useGameStore.ts         |     100 |       60 |     100 |     100 | 40-64             
+--------------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 21 passed, 22 total
+Snapshots:   0 total
+Time:        2.701 s
+Ran all test suites.

@@ -1,0 +1,3 @@
+// Cosmic Alchemist — ElementalOrb
+// Phase 2: Full gesture + animation implementation
+export { default } from './ElementalOrb';

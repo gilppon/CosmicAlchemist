@@ -1,0 +1,50 @@
+
+> cosmic-alchemist@1.0.0 test:coverage
+> jest --coverage
+
+PASS __tests__/unit/store/useGameStore.test.ts
+  useGameStore
+    Initial State
+      √ should have score = 0 (19 ms)
+      √ should have highScore = 0 (2 ms)
+      √ should have currentElement = null (1 ms)
+      √ should have empty discoveredPlanets (1 ms)
+      √ should have empty activeElements (1 ms)
+    Element Management
+      √ should set current element (1 ms)
+      √ should clear current element with null (1 ms)
+      √ should add an element to activeElements
+      √ should remove an element by id
+      √ should update element density (1 ms)
+      √ should update element type (1 ms)
+      √ should update element position
+      √ should update element velocity (1 ms)
+    Scoring
+      √ should add score
+      √ should accumulate score (1 ms)
+      √ should update highScore when score exceeds it
+      √ should NOT decrease highScore on reset (1 ms)
+    Planet Discovery
+      √ should discover a new planet
+      √ should NOT add duplicate planet (1 ms)
+      √ should check if planet is discovered
+      √ should preserve discoveredPlanets on reset (1 ms)
+    Reset
+      √ should reset score but keep highScore and discoveredPlanets
+
+--------------------------|---------|----------|---------|---------|-------------------
+File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------------|---------|----------|---------|---------|-------------------
+All files                 |      75 |     37.5 |    90.9 |   69.23 |                   
+ hooks                    |       0 |        0 |       0 |       0 |                   
+  use-color-scheme.ts     |       0 |        0 |       0 |       0 |                   
+  use-color-scheme.web.ts |       0 |        0 |       0 |       0 | 8-20              
+  use-theme-color.ts      |       0 |        0 |       0 |       0 | 13-19             
+ store                    |     100 |       60 |     100 |     100 |                   
+  useGameStore.ts         |     100 |       60 |     100 |     100 | 40-64             
+--------------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       22 passed, 22 total
+Snapshots:   0 total
+Time:        2.549 s
+Ran all test suites.

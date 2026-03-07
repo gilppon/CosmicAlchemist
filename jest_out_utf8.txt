@@ -1,0 +1,50 @@
+﻿
+> cosmic-alchemist@1.0.0 test
+> jest
+
+node.exe : ??Validatio
+n Warning:
+위치 줄:1 문자:1
++ & "C:\Program Files\
+nodejs/node.exe" "C:\P
+rogram Files\nodejs/no
+de_mo ...
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (??Validati   
+ on Warning::Strin    
+g) [], RemoteExce    p
+tion
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+
+  Unknown option "setu
+pFilesAfterSetup" with
+ value [] was found.
+  This is probably a t
+yping mistake. Fixing 
+it will remove this me
+ssage.
+
+  Configuration Docume
+ntation:
+  https://jestjs.io/do
+cs/configuration
+
+??Validation Error:
+
+  Preset jest-expo not
+ found relative to roo
+tDir E:\expogame.
+
+  Configuration Docume
+ntation:
+  https://jestjs.io/do
+cs/configuration
+

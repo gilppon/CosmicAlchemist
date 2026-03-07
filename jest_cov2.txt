@@ -1,0 +1,100 @@
+﻿
+> cosmic-alchemist@1.0.0 test:coverage
+> jest --coverage
+
+node.exe : FAIL __test
+s__/unit/store/useGame
+Store.test.ts
+위치 줄:1 문자:1
++ & "C:\Program Files\
+nodejs/node.exe" "C:\P
+rogram Files\nodejs/no
+de_mo ...
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (FAIL __tes   
+ ts__/...meStore.t    
+est.ts:String) []    ,
+ RemoteException
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+  ??Test suite failed 
+to run
+
+    Incorrect version 
+of "react-test-rendere
+r" detected. Expected 
+"19.1.0", but found "1
+9.2.0".
+
+    Fix it by running:
+    npm install -D rea
+ct-test-renderer@19.1.
+0
+
+    [0m [90m  5 |[3
+9m [90m * Expected: A
+ll tests FAIL (Red) un
+til store is implement
+ed.[39m
+     [90m  6 |[39m 
+[90m */[39m
+    [31m[1m>[22m[3
+9m[90m  7 |[39m [36
+mimport[39m { act[33
+m,[39m renderHook } 
+[36mfrom[39m [32m'@t
+esting-library/react-n
+ative'[39m[33m;[39m
+     [90m    |[39m 
+[31m[1m^[22m[39m
+     [90m  8 |[39m
+     [90m  9 |[39m 
+[90m// This import sho
+uld FAIL until we impl
+ement the store[39m
+     [90m 10 |[39m 
+[36mimport[39m { useG
+ameStore } [36mfrom[
+39m [32m'@/store/useG
+ameStore'[39m[33m;[
+39m[0m
+
+      at Object.ensure
+PeerDeps (node_modules
+/@testing-library/reac
+t-native/src/helpers/e
+nsure-peer-deps.ts:36:
+3)
+      at Object.requir
+e (node_modules/@testi
+ng-library/react-nativ
+e/src/index.ts:1:1)
+      at Object.requir
+e (__tests__/unit/stor
+e/useGameStore.test.ts
+:7:1)
+
+--------------------------|---------|----------|---------|---------|-------------------
+File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------------|---------|----------|---------|---------|-------------------
+All files                 |       0 |        0 |       0 |       0 |                   
+ hooks                    |       0 |        0 |       0 |       0 |                   
+  use-color-scheme.ts     |       0 |        0 |       0 |       0 |                   
+  use-color-scheme.web.ts |       0 |        0 |       0 |       0 | 8-20              
+  use-theme-color.ts      |       0 |        0 |       0 |       0 | 13-19             
+ store                    |       0 |        0 |       0 |       0 |                   
+  useGameStore.ts         |       0 |        0 |       0 |       0 | 6-109             
+--------------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 failed,
+ 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        1.531 s
+Ran all test suites.

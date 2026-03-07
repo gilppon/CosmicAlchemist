@@ -1,0 +1,70 @@
+﻿
+> cosmic-alchemist@1.0.0 test:coverage
+> jest --coverage
+
+node.exe : FAIL __test
+s__/unit/store/useGame
+Store.test.ts
+위치 줄:1 문자:1
++ & "C:\Program Files\
+nodejs/node.exe" "C:\P
+rogram Files\nodejs/no
+de_mo ...
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (FAIL __tes   
+ ts__/...meStore.t    
+est.ts:String) []    ,
+ RemoteException
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+  ??Test suite failed 
+to run
+
+    ReferenceError: Yo
+u are trying to `impor
+t` a file outside of t
+he scope of the test c
+ode.
+
+      at Runtime._exec
+Module (node_modules/j
+est-runtime/build/inde
+x.js:1216:13)
+      at require (node
+_modules/expo/src/wint
+er/runtime.native.ts:2
+0:43)
+      at getValue (nod
+e_modules/expo/src/win
+ter/installGlobal.ts:9
+7:21)
+      at Object.get [a
+s __ExpoImportMetaRegi
+stry] (node_modules/ex
+po/src/winter/installG
+lobal.ts:44:16)
+
+--------------------------|---------|----------|---------|---------|-------------------
+File                      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------------|---------|----------|---------|---------|-------------------
+All files                 |       0 |        0 |       0 |       0 |                   
+ hooks                    |       0 |        0 |       0 |       0 |                   
+  use-color-scheme.ts     |       0 |        0 |       0 |       0 |                   
+  use-color-scheme.web.ts |       0 |        0 |       0 |       0 | 8-20              
+  use-theme-color.ts      |       0 |        0 |       0 |       0 | 13-19             
+ store                    |       0 |        0 |       0 |       0 |                   
+  useGameStore.ts         |       0 |        0 |       0 |       0 | 6-109             
+--------------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 failed,
+ 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        2.88 s
+Ran all test suites.
