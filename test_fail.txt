@@ -1,0 +1,44 @@
+[0m[7m[1m[31m FAIL [39m[22m[27m[0m [2m__tests__/unit/components/Game/[22m[1mElementalOrb.test.ts[22m
+  ElementalOrb
+    [31m×[39m [2mrenders correctly and reflects animation state (40 ms)[22m
+
+[1m[31m  [1m● [22m[1mElementalOrb › renders correctly and reflects animation state[39m[22m
+
+    TypeError: gestureConfig.toGestureArray is not a function
+[2m[22m
+[2m    [0m [90m 30 |[39m[22m
+[2m     [90m 31 |[39m         [90m// Test with components/Game/ElementalOrb[39m[22m
+[2m    [31m[1m>[22m[2m[39m[90m 32 |[39m         render([33mReact[39m[33m.[39mcreateElement([33mElementalOrb[39m))[33m;[39m[22m
+[2m     [90m    |[39m               [31m[1m^[22m[2m[39m[22m
+[2m     [90m 33 |[39m[22m
+[2m     [90m 34 |[39m         [36mconst[39m orb [33m=[39m screen[33m.[39mgetByTestId([32m'elemental-orb'[39m)[33m;[39m[22m
+[2m     [90m 35 |[39m         expect(orb)[33m.[39mtoBeDefined()[33m;[39m[0m[22m
+[2m[22m
+[2m      [2mat toGestureArray ([22m[2mnode_modules/react-native-gesture-handler/src/handlers/gestures/GestureDetector/index.tsx[2m:108:25)[22m[2m[22m
+[2m      [2mat mountMemo ([22m[2mnode_modules/react-test-renderer/cjs/react-test-renderer.development.js[2m:3859:23)[22m[2m[22m
+[2m      [2mat Object.useMemo ([22m[2mnode_modules/react-test-renderer/cjs/react-test-renderer.development.js[2m:13093:18)[22m[2m[22m
+[2m      [2mat process.env.NODE_ENV.exports.useMemo ([22m[2mnode_modules/react/cjs/react.development.js[2m:1209:34)[22m[2m[22m
+[2m      [2mat GestureDetector ([22m[2mnode_modules/react-native-gesture-handler/src/handlers/gestures/GestureDetector/index.tsx[2m:107:35)[22m[2m[22m
+[2m      [2mat Object.react-stack-bottom-frame ([22m[2mnode_modules/react-test-renderer/cjs/react-test-renderer.development.js[2m:13976:20)[22m[2m[22m
+[2m      [2mat renderWithHooks ([22m[2mnode_modules/react-test-renderer/cjs/react-test-renderer.development.js[2m:2866:22)[22m[2m[22m
+[2m      [2mat updateFunctionComponent ([22m[2mnode_modules/react-test-renderer/cjs/react-test-renderer.development.js[2m:6006:19)[22m[2m[22m
+[2m      [2mat beginWork ([22m[2mnode_modules/react-test-renderer/cjs/react-test-renderer.development.js[2m:7474:18)[22m[2m[22m
+[2m      [2mat runWithFiberInDEV ([22m[2mnode_modules/react-test-renderer/cjs/react-test-renderer.development.js[2m:1574:13)[22m[2m[22m
+[2m      [2mat performUnitOfWork ([22m[2mnode_modules/react-test-renderer/cjs/react-test-renderer.development.js[2m:10972:22)[22m[2m[22m
+[2m      [2mat workLoopSync ([22m[2mnode_modules/react-test-renderer/cjs/react-test-renderer.development.js[2m:10816:41)[22m[2m[22m
+[2m      [2mat renderRootSync ([22m[2mnode_modules/react-test-renderer/cjs/react-test-renderer.development.js[2m:10797:11)[22m[2m[22m
+[2m      [2mat performWorkOnRoot ([22m[2mnode_modules/react-test-renderer/cjs/react-test-renderer.development.js[2m:10384:39)[22m[2m[22m
+[2m      [2mat performWorkOnRootViaSchedulerTask ([22m[2mnode_modules/react-test-renderer/cjs/react-test-renderer.development.js[2m:2094:7)[22m[2m[22m
+[2m      [2mat flushActQueue ([22m[2mnode_modules/react/cjs/react.development.js[2m:566:34)[22m[2m[22m
+[2m      [2mat process.env.NODE_ENV.exports.act ([22m[2mnode_modules/react/cjs/react.development.js[2m:859:10)[22m[2m[22m
+[2m      [2mat actImplementation ([22m[2mnode_modules/@testing-library/react-native/src/act.ts[2m:30:25)[22m[2m[22m
+[2m      [2mat renderWithAct ([22m[2mnode_modules/@testing-library/react-native/src/render-act.ts[2m:13:11)[22m[2m[22m
+[2m      [2mat renderInternal ([22m[2mnode_modules/@testing-library/react-native/src/render.tsx[2m:69:33)[22m[2m[22m
+[2m      [2mat renderInternal ([22m[2mnode_modules/@testing-library/react-native/src/render.tsx[2m:44:10)[22m[2m[22m
+[2m      [2mat Object.<anonymous> ([22m[2m[0m[36m__tests__/unit/components/Game/ElementalOrb.test.ts[39m[0m[2m:32:15)[22m[2m[22m
+
+[1mTest Suites: [22m[1m[31m1 failed[39m[22m, 1 total
+[1mTests:       [22m[1m[31m1 failed[39m[22m, 1 total
+[1mSnapshots:   [22m0 total
+[1mTime:[22m        2.363 s, estimated 3 s
+[2mRan all test suites[22m[2m matching [22m__tests__/unit/components/Game/ElementalOrb.test.ts[2m.[22m

@@ -15,8 +15,8 @@ export default function ArchiveScreen() {
                 <Text style={styles.planetName}>{item.name}</Text>
                 <Text style={styles.planetDesc}>{item.description}</Text>
                 <View style={styles.planetMeta}>
-                    <Text style={[styles.rarityBadge, styles[`rarity_${item.rarity}`]]}>
-                        {item.rarity.toUpperCase()}
+                    <Text style={[styles.rarityBadge, styles[`rarity_${item.rarity}` as keyof typeof styles]]}>
+                        {item.rarity}
                     </Text>
                     <Text style={styles.planetScore}>+{item.score} pts</Text>
                 </View>
@@ -29,7 +29,7 @@ export default function ArchiveScreen() {
             <View style={styles.header}>
                 <Text style={styles.title}>🪐 Planet Archive</Text>
                 <Pressable onPress={() => router.back()} style={styles.closeBtn}>
-                    <Text style={styles.closeBtnText}>✕</Text>
+                    <Text style={styles.closeBtnText}>← Back</Text>
                 </Pressable>
             </View>
 
@@ -40,7 +40,7 @@ export default function ArchiveScreen() {
             {discoveredPlanets.length === 0 ? (
                 <View style={styles.emptyState}>
                     <Text style={styles.emptyIcon}>🔭</Text>
-                    <Text style={styles.emptyText}>No planets discovered yet</Text>
+                    <Text style={styles.emptyText}>No planets discovered yet.</Text>
                     <Text style={styles.emptyHint}>
                         Combine elements to create new worlds!
                     </Text>

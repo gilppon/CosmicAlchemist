@@ -1,0 +1,85 @@
+  console.error
+    --- IMPORT ERROR TRACE ---
+
+    [0m [90m  6 |[39m             expect(useComplexGesture)[33m.[39mtoBeDefined()[33m;[39m
+     [90m  7 |[39m         } [36mcatch[39m (e[33m:[39m any) {
+    [31m[1m>[22m[39m[90m  8 |[39m             console[33m.[39merror([32m'--- IMPORT ERROR TRACE ---'[39m)[33m;[39m
+     [90m    |[39m                     [31m[1m^[22m[39m
+     [90m  9 |[39m             console[33m.[39merror(e[33m.[39mmessage)[33m;[39m
+     [90m 10 |[39m             console[33m.[39merror(e[33m.[39mstack)[33m;[39m
+     [90m 11 |[39m             [36mthrow[39m e[33m;[39m[0m
+
+      at Object.error (__tests__/unit/components/Game/ElementalOrb.test.ts:8:21)
+
+  console.error
+    Cannot find module '../../../hooks/useComplexGesture' from '__tests__/unit/components/Game/ElementalOrb.test.ts'
+
+    [0m [90m  7 |[39m         } [36mcatch[39m (e[33m:[39m any) {
+     [90m  8 |[39m             console[33m.[39merror([32m'--- IMPORT ERROR TRACE ---'[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m  9 |[39m             console[33m.[39merror(e[33m.[39mmessage)[33m;[39m
+     [90m    |[39m                     [31m[1m^[22m[39m
+     [90m 10 |[39m             console[33m.[39merror(e[33m.[39mstack)[33m;[39m
+     [90m 11 |[39m             [36mthrow[39m e[33m;[39m
+     [90m 12 |[39m         }[0m
+
+      at Object.error (__tests__/unit/components/Game/ElementalOrb.test.ts:9:21)
+
+  console.error
+    Error: Cannot find module '../../../hooks/useComplexGesture' from '__tests__/unit/components/Game/ElementalOrb.test.ts'
+        at Resolver._throwModNotFoundError (E:\expogame\node_modules\jest-resolve\build\index.js:863:11)
+        at Resolver.resolveModule (E:\expogame\node_modules\jest-resolve\build\index.js:810:10)
+        at Resolver._getVirtualMockPath (E:\expogame\node_modules\jest-resolve\build\index.js:1004:84)
+        at Resolver._getAbsolutePath (E:\expogame\node_modules\jest-resolve\build\index.js:984:98)
+        at Resolver.getModuleID (E:\expogame\node_modules\jest-resolve\build\index.js:949:31)
+        at Runtime._shouldMockCjs (E:\expogame\node_modules\jest-runtime\build\index.js:1486:37)
+        at Runtime.requireModuleOrMock (E:\expogame\node_modules\jest-runtime\build\index.js:961:16)
+        at Object.require (E:\expogame\__tests__\unit\components\Game\ElementalOrb.test.ts:5:43)
+        at Promise.finally.completed (E:\expogame\node_modules\jest-circus\build\jestAdapterInit.js:1557:28)
+        at new Promise (<anonymous>)
+        at callAsyncCircusFn (E:\expogame\node_modules\jest-circus\build\jestAdapterInit.js:1497:10)
+        at _callCircusTest (E:\expogame\node_modules\jest-circus\build\jestAdapterInit.js:1007:40)
+        at processTicksAndRejections (node:internal/process/task_queues:103:5)
+        at _runTest (E:\expogame\node_modules\jest-circus\build\jestAdapterInit.js:947:3)
+        at E:\expogame\node_modules\jest-circus\build\jestAdapterInit.js:849:7
+        at _runTestsForDescribeBlock (E:\expogame\node_modules\jest-circus\build\jestAdapterInit.js:862:11)
+        at _runTestsForDescribeBlock (E:\expogame\node_modules\jest-circus\build\jestAdapterInit.js:857:11)
+        at run (E:\expogame\node_modules\jest-circus\build\jestAdapterInit.js:761:3)
+        at runAndTransformResultsToJestFormat (E:\expogame\node_modules\jest-circus\build\jestAdapterInit.js:1918:21)
+        at jestAdapter (E:\expogame\node_modules\jest-circus\build\runner.js:101:19)
+        at runTestInternal (E:\expogame\node_modules\jest-runner\build\index.js:275:16)
+        at runTest (E:\expogame\node_modules\jest-runner\build\index.js:343:7)
+
+    [0m [90m  8 |[39m             console[33m.[39merror([32m'--- IMPORT ERROR TRACE ---'[39m)[33m;[39m
+     [90m  9 |[39m             console[33m.[39merror(e[33m.[39mmessage)[33m;[39m
+    [31m[1m>[22m[39m[90m 10 |[39m             console[33m.[39merror(e[33m.[39mstack)[33m;[39m
+     [90m    |[39m                     [31m[1m^[22m[39m
+     [90m 11 |[39m             [36mthrow[39m e[33m;[39m
+     [90m 12 |[39m         }
+     [90m 13 |[39m     })[33m;[39m[0m
+
+      at Object.error (__tests__/unit/components/Game/ElementalOrb.test.ts:10:21)
+
+FAIL __tests__/unit/components/Game/ElementalOrb.test.ts (19.631 s)
+  Import Debug Test
+    × attempts to require useComplexGesture and catches error (75 ms)
+
+  ● Import Debug Test › attempts to require useComplexGesture and catches error
+
+    Cannot find module '../../../hooks/useComplexGesture' from '__tests__/unit/components/Game/ElementalOrb.test.ts'
+
+    [0m [90m 3 |[39m         [36mtry[39m {
+     [90m 4 |[39m             [90m// Use relative path for debugging[39m
+    [31m[1m>[22m[39m[90m 5 |[39m             [36mconst[39m { useComplexGesture } [33m=[39m require([32m'../../../hooks/useComplexGesture'[39m)[33m;[39m
+     [90m   |[39m                                           [31m[1m^[22m[39m
+     [90m 6 |[39m             expect(useComplexGesture)[33m.[39mtoBeDefined()[33m;[39m
+     [90m 7 |[39m         } [36mcatch[39m (e[33m:[39m any) {
+     [90m 8 |[39m             console[33m.[39merror([32m'--- IMPORT ERROR TRACE ---'[39m)[33m;[39m[0m
+
+      at Resolver._throwModNotFoundError (node_modules/jest-resolve/build/index.js:863:11)
+      at Object.require (__tests__/unit/components/Game/ElementalOrb.test.ts:5:43)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        20.186 s
+Ran all test suites matching __tests__/unit/components/Game/ElementalOrb.test.ts.

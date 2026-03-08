@@ -1,0 +1,71 @@
+Command failed: npx jest index.test.tsx
+FAIL __tests__/unit/app/index.test.tsx
+  IndexScreen (Main Game Canvas)
+    × renders the TargetZone and score (77 ms)
+    × contains a link to the Archive screen (7 ms)
+
+  ● IndexScreen (Main Game Canvas) › renders the TargetZone and score
+
+    TypeError: addElement is not a function
+
+    [0m [90m 16 |[39m     useEffect(() [33m=>[39m {
+     [90m 17 |[39m         [36mif[39m (activeElements[33m.[39mlength [33m===[39m [35m0[39m) {
+    [31m[1m>[22m[39m[90m 18 |[39m             addElement({
+     [90m    |[39m             [31m[1m^[22m[39m
+     [90m 19 |[39m                 id[33m:[39m [32m'e_water_1'[39m[33m,[39m type[33m:[39m [32m'water'[39m[33m,[39m mass[33m:[39m [35m1[39m[33m,[39m density[33m:[39m [35m1[39m[33m,[39m
+     [90m 20 |[39m                 velocity[33m:[39m { vx[33m:[39m [35m0[39m[33m,[39m vy[33m:[39m [35m0[39m }[33m,[39m position[33m:[39m { x[33m:[39m [35m100[39m[33m,[39m y[33m:[39m [35m200[39m }
+     [90m 21 |[39m             })[33m;[39m[0m
+
+      at addElement (app/index.tsx:18:13)
+      at Object.react-stack-bottom-frame (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14062:20)
+      at runWithFiberInDEV (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:1574:13)
+      at commitHookEffectListMount (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:8376:29)
+      at commitHookPassiveMountEffects (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:8463:11)
+      at commitPassiveMountOnFiber (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:9782:13)
+      at recursivelyTraversePassiveMountEffects (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:9756:11)
+      at commitPassiveMountOnFiber (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:9794:11)
+      at flushPendingEffects (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:11528:11)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:2082:11)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:859:10)
+      at actImplementation (node_modules/@testing-library/react-native/src/act.ts:30:25)
+      at renderWithAct (node_modules/@testing-library/react-native/src/render-act.ts:13:11)
+      at renderInternal (node_modules/@testing-library/react-native/src/render.tsx:69:33)
+      at renderInternal (node_modules/@testing-library/react-native/src/render.tsx:44:10)
+      at Object.<anonymous> (__tests__/unit/app/index.test.tsx:37:37)
+
+  ● IndexScreen (Main Game Canvas) › contains a link to the Archive screen
+
+    TypeError: addElement is not a function
+
+    [0m [90m 16 |[39m     useEffect(() [33m=>[39m {
+     [90m 17 |[39m         [36mif[39m (activeElements[33m.[39mlength [33m===[39m [35m0[39m) {
+    [31m[1m>[22m[39m[90m 18 |[39m             addElement({
+     [90m    |[39m             [31m[1m^[22m[39m
+     [90m 19 |[39m                 id[33m:[39m [32m'e_water_1'[39m[33m,[39m type[33m:[39m [32m'water'[39m[33m,[39m mass[33m:[39m [35m1[39m[33m,[39m density[33m:[39m [35m1[39m[33m,[39m
+     [90m 20 |[39m                 velocity[33m:[39m { vx[33m:[39m [35m0[39m[33m,[39m vy[33m:[39m [35m0[39m }[33m,[39m position[33m:[39m { x[33m:[39m [35m100[39m[33m,[39m y[33m:[39m [35m200[39m }
+     [90m 21 |[39m             })[33m;[39m[0m
+
+      at addElement (app/index.tsx:18:13)
+      at Object.react-stack-bottom-frame (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14062:20)
+      at runWithFiberInDEV (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:1574:13)
+      at commitHookEffectListMount (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:8376:29)
+      at commitHookPassiveMountEffects (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:8463:11)
+      at commitPassiveMountOnFiber (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:9782:13)
+      at recursivelyTraversePassiveMountEffects (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:9756:11)
+      at commitPassiveMountOnFiber (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:9794:11)
+      at flushPendingEffects (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:11528:11)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-test-renderer/cjs/react-test-renderer.development.js:2082:11)
+      at flushActQueue (node_modules/react/cjs/react.development.js:566:34)
+      at process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:859:10)
+      at actImplementation (node_modules/@testing-library/react-native/src/act.ts:30:25)
+      at renderWithAct (node_modules/@testing-library/react-native/src/render-act.ts:13:11)
+      at renderInternal (node_modules/@testing-library/react-native/src/render.tsx:69:33)
+      at renderInternal (node_modules/@testing-library/react-native/src/render.tsx:44:10)
+      at Object.<anonymous> (__tests__/unit/app/index.test.tsx:42:37)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 2 total
+Snapshots:   0 total
+Time:        2.535 s
+Ran all test suites matching index.test.tsx.
