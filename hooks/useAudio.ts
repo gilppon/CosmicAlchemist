@@ -1,41 +1,42 @@
 import { Audio } from 'expo-av';
-import { useCallback } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 export const useAudio = () => {
-    const playSuccessSound = useCallback(async () => {
-        try {
-            const { sound } = await Audio.Sound.createAsync(
-                require('../assets/sounds/success.mp3')
-            );
-            await sound.playAsync();
+    const [sound, setSound] = useState<Audio.Sound | null>(null);
 
-            // 재생 완료 후 메모리 해제
-            sound.setOnPlaybackStatusUpdate((status) => {
+    const playSound = async (type: 'success' | 'fail') => {
+        try {
+            const soundFile = type === 'success'
+                ? require('../assets/sounds/success.mp3')
+                : require('../assets/sounds/fail.mp3');
+
+            const { sound: playbackObject } = await Audio.Sound.createAsync(
+                soundFile,
+                { shouldPlay: true }
+            );
+
+            playbackObject.setOnPlaybackStatusUpdate((status) => {
                 if (status.isLoaded && status.didJustFinish) {
-                    sound.unloadAsync();
+                    playbackObject.unloadAsync().catch(() => { });
                 }
             });
-        } catch (error) {
-            console.error('Failed to play success sound', error);
-        }
-    }, []);
 
-    const playFailSound = useCallback(async () => {
-        try {
-            const { sound } = await Audio.Sound.createAsync(
-                require('../assets/sounds/fail.mp3')
-            );
-            await sound.playAsync();
-
-            sound.setOnPlaybackStatusUpdate((status) => {
-                if (status.isLoaded && status.didJustFinish) {
-                    sound.unloadAsync();
-                }
-            });
+            setSound(playbackObject);
         } catch (error) {
-            console.error('Failed to play fail sound', error);
+            console.warn(`[useAudio] Playback failed for ${type}:`, error);
         }
-    }, []);
+    };
+
+    const playSuccessSound = useCallback(() => playSound('success'), []);
+    const playFailSound = useCallback(() => playSound('fail'), []);
+
+    useEffect(() => {
+        return () => {
+            if (sound) {
+                sound.unloadAsync().catch(() => { });
+            }
+        };
+    }, [sound]);
 
     return {
         playSuccessSound,

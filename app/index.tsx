@@ -13,9 +13,11 @@ export default function GameScreen() {
     const { score, activeElements, addElement } = useGameStore();
     const interactionIntensity = useSharedValue(0);
 
-    // Initial basic elements spawning for MVP
+    // MVP: Initial elements spawning (only once)
+    const hasSpawned = React.useRef(false);
     useEffect(() => {
-        if (activeElements.length === 0) {
+        if (!hasSpawned.current && activeElements.length === 0) {
+            hasSpawned.current = true;
             addElement({
                 id: 'e_water_1', type: 'water', mass: 1, density: 1,
                 velocity: { vx: 0, vy: 0 }, position: { x: 100, y: 200 }
